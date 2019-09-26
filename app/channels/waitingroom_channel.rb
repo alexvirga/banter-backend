@@ -1,6 +1,7 @@
 class WaitingroomChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "waitingroom_channel"
+    group = Group.find(params[:group_id])
+    stream_for group
   end
 
   def unsubscribed

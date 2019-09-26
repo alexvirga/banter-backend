@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_224704) do
 
   create_table "groups", force: :cascade do |t|
     t.string "group_code"
-    t.integer "bill_total"
+    t.float "bill_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "tip_percentage"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2019_09_25_224704) do
   end
 
   create_table "user_groups", force: :cascade do |t|
-    t.string "group_id"
-    t.string "user_id"
+    t.integer "group_id"
+    t.integer "user_id"
     t.string "user_payment_amt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
