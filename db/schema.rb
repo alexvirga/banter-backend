@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_18_185506) do
+ActiveRecord::Schema.define(version: 2019_09_25_224704) do
 
   create_table "groups", force: :cascade do |t|
     t.string "group_code"
-    t.string "bill_total"
+    t.integer "bill_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "tip_percentage"
+    t.integer "leader_id"
   end
 
   create_table "user_groups", force: :cascade do |t|
