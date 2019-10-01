@@ -3,7 +3,7 @@ class CreateUserGroups < ActiveRecord::Migration[5.2]
     create_table :user_groups do |t|
       t.integer :group_id
       t.integer :user_id
-      t.string :user_payment_amt
+      t.integer :user_payment_amt, :default => 0
       t.timestamps
     end
   end

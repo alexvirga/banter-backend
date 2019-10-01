@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user1 = User.create!(
-  email: "alexander.virga@gmail.com",
-  password: "password",
+  email: "Test",
+  password: "Test",
   username: "alexvirga",
 )
 
@@ -19,43 +19,73 @@ user2 = User.create!(
 )
 
 user3 = User.create!(
-  email: "Test",
-  password: "Test",
+  email: "Test2",
+  password: "Test2",
+  username: "testwoman",
+)
+user4 = User.create!(
+  email: "Test3",
+  password: "Test3",
   username: "al",
+)
+
+user5 = User.create!(
+  email: "Test4",
+  password: "Test4",
+  username: "testthey",
 )
 
 group1 = Group.create!(
   group_code: "ABCDE",
-  bill_total: "200",
+  bill_total: 200,
+  tip_percentage: 20,
 
 )
 
 group2 = Group.create!(
   group_code: "BCDEF",
-  bill_total: "200",
+  bill_total: 200,
 
 )
 
 party1 = UserGroup.create!(
   group_id: 1,
   user_id: 1,
-  user_payment_amt: "23",
+  user_payment_amt: 25,
 )
 
 party2 = UserGroup.create!(
   group_id: 1,
   user_id: 2,
-  user_payment_amt: "54",
+  user_payment_amt: 20,
 )
 
 party3 = UserGroup.create!(
   group_id: 2,
   user_id: 2,
-  user_payment_amt: "54",
+  user_payment_amt: 40,
 )
 
-party3 = UserGroup.create!(
+party4 = UserGroup.create!(
   group_id: 2,
   user_id: 3,
-  user_payment_amt: "54",
+  user_payment_amt: 30,
+)
+
+party5 = UserGroup.create!(
+  group_id: 1,
+  user_id: 3,
+  user_payment_amt: 25,
+)
+
+party5 = UserGroup.create!(
+  group_id: 1,
+  user_id: 4,
+  user_payment_amt: 10,
+)
+
+party6 = UserGroup.create!(
+  group_id: 1,
+  user_id: 5,
+  user_payment_amt: 15,
 )
