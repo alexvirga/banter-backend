@@ -1,7 +1,7 @@
 class UserGroupsController < ApplicationController
   def index
     usergroup = UserGroup.all
-    render json: usergroup, include: [:user, :group => { :only => [:group_code]
+    render json: usergroup, include: [:user]
   end
 
   def create
