@@ -1,7 +1,7 @@
 class UserGroupsController < ApplicationController
   def index
     usergroup = UserGroup.all
-    render json: usergroup, include: [:user]
+    render json: usergroup, include: [:user, :group => { :only => [:group_code]
   end
 
   def create
@@ -12,6 +12,6 @@ class UserGroupsController < ApplicationController
   def update
     usergroup = UserGroup.find(params[:id])
     usergroup.update(user_payment_amt: params[:user_payment_amt])
-    render json: usergroup, include: [:user, :group => { :only => [:group_code]
+    render json: usergroup, include: [:user]
   end
 end
