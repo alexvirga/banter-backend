@@ -15,24 +15,24 @@ user1 = User.create!(
 user2 = User.create!(
   email: "Test1",
   password: "Test1",
-  username: "testman",
+  username: "Testman",
 )
 
 user3 = User.create!(
   email: "Test2",
   password: "Test2",
-  username: "testwoman",
+  username: "Testwoman",
 )
 user4 = User.create!(
   email: "Test3",
   password: "Test3",
-  username: "al",
+  username: "Flatiron Student",
 )
 
 user5 = User.create!(
   email: "Test4",
   password: "Test4",
-  username: "testthey",
+  username: "Real User",
 )
 
 group1 = Group.create!(
@@ -45,6 +45,7 @@ group1 = Group.create!(
 group2 = Group.create!(
   group_code: "BCDEF",
   bill_total: 200,
+  tip_percentage: 20,
 
 )
 
